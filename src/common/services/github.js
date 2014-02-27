@@ -65,7 +65,7 @@ GitHubService.prototype.exec = function (method, path, context, params) {
 
     path = service.preparePath(method, path, context, params);
 
-    if (method === http.HEAD && method === http.GET) {
+    if (method === http.HEAD || method === http.GET) {
       data = {};
     }
     else {
