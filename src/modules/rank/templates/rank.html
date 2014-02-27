@@ -1,0 +1,12 @@
+<div class="instructions">Enter the name of a GitHub organization below to see its repos ranked by number of stargazers.</div>
+
+<div class="search-container clearfix">
+  <input type="text" class="search-input" data-ui="search-input" data-value="model:name"/>
+</div>
+
+<div class="list-container" data-ui="list-container">
+  <div class="loading-container" data-if="model:loading">
+    <div class="loading" data-ui="loading"></div>
+  </div>
+  <div class="message-container" data-if="model:message" data-text="model:message"></div>
+</div>

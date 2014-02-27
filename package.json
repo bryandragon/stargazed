@@ -1,0 +1,22 @@
+{
+  "name": "stargazed",
+  "version": "0.0.0",
+  "description": "View a GitHub organization's repositories ranked by number of stargazers.",
+  "author": "Bryan Dragon <bryandragon@gmail.com>",
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+    "brfs": "~0.2.1",
+    "gulp": "~3.5.2",
+    "gulp-browserify": "~0.4.6",
+    "gulp-clean": "~0.2.4",
+    "gulp-concat": "~2.1.7",
+    "gulp-connect": "~1.0.5",
+    "gulp-mocha": "~0.4.1",
+    "gulp-stylus": "~0.0.13",
+    "mocha": "~1.17.1"
+  },
+  "license": "MIT",
+  "private": true
+}
