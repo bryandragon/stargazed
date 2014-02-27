@@ -1,0 +1,23 @@
+{
+  "login": "Netflix",
+  "id": 913567,
+  "url": "https://api.github.com/orgs/Netflix",
+  "repos_url": "https://api.github.com/orgs/Netflix/repos",
+  "events_url": "https://api.github.com/orgs/Netflix/events",
+  "members_url": "https://api.github.com/orgs/Netflix/members{/member}",
+  "public_members_url": "https://api.github.com/orgs/Netflix/public_members{/member}",
+  "avatar_url": "https://gravatar.com/avatar/9452a86b2d066c6e6e35fe2ea83d16a5?d=https%3A%2F%2Fidenticons.github.com%2F58f0ccb4c28a4a1f17b2ededdf078bb0.png&r=x",
+  "name": "Netflix, Inc.",
+  "company": null,
+  "blog": "http://netflix.github.io/",
+  "location": "Los Gatos, California",
+  "email": null,
+  "public_repos": 45,
+  "public_gists": 0,
+  "followers": 0,
+  "following": 0,
+  "html_url": "https://github.com/Netflix",
+  "created_at": "2011-07-13T20:20:01Z",
+  "updated_at": "2014-02-24T01:59:43Z",
+  "type": "Organization"
+}

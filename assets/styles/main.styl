@@ -1,0 +1,99 @@
+@import "normalize"
+@import "nib/image"
+
+$gray = #585858
+$gray-light = #f9f9f9
+$hgap = 20px
+$vgap = 20px
+$warn-bg = #f2dede
+$warn-border = #ebccd1
+$warn-color = #a94442
+
+*,
+*:before,
+*:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+.clearfix
+  *zoom: 1
+
+  &:before,
+  &:after
+    content: ' '
+    display: table
+
+  &:after
+    clear: both
+
+.pull-right
+  float: right
+
+.pull-left
+  float: left
+
+.container
+  text-align: left
+  margin: 0 auto
+  padding: 0 ($hgap / 2)
+  max-width: 800px
+  width: 100%
+
+.header,
+.footer
+  margin-top: $vgap
+  margin-bottom: $vgap
+
+.footer
+  padding: $vgap 0
+
+.author
+  color: $gray
+
+.instructions,
+.search-container,
+.loading-container,
+.message-container
+  margin-bottom: $vgap
+
+.search-input
+  font-size: 20px
+  padding: 6px
+  width: 100%
+
+.loading-container
+  text-align: center
+
+.loading
+  image: '/build/images/loader.gif' 32px 32px
+  margin: (2 * $vgap) auto
+  width: 32px
+  height: 32px
+
+.message-container
+  background-color: $warn-bg
+  border: 1px solid $warn-border
+  border-radius: 4px
+  color: $warn-color
+  margin: $vgap auto
+  padding: ($vgap / 2) ($hgap / 2)
+  width: 100%
+
+.repo-view
+  background-color: $gray-light
+  border: 1px solid darken($gray-light, 15%)
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.10)
+  text-shadow: 0 1px #fff
+  padding: $vgap $hgap
+  margin: ($vgap / 2) auto
+
+  .name
+    font-weight: bold
+
+  .stargazers
+    .label
+      color: $gray
