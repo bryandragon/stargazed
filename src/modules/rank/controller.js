@@ -18,7 +18,7 @@ var RankController = Marionette.Controller.extend({
 
     this.model = options.model || new RankModel;
     this.collection =
-      options.controller || App.request('entity:repos', [], {comparator: this.sort});
+      options.collection || App.request('entity:repos', [], {comparator: this.sort});
     this.service = options.service;
     this.view = new RankView({
       model: this.model,
