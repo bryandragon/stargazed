@@ -32,15 +32,6 @@ gulp.task('build-app', function () {
 gulp.task('build-test', function () {
   return gulp.src('test/main.js')
     .pipe(bundle())
-    .on('prebundle', function (bundle) {
-      // Expose globals to browserify for building tests
-      var testGlobals =
-        'describe,it,before,beforeEach,after,afterEach,chai,sinon'.split(',');
-
-      testGlobals.forEach(function (name) {
-        bundle.external(name);
-      });
-    })
     .pipe(concat('test.js'))
     .pipe(gulp.dest('build/js'));
 });
@@ -57,47 +48,32 @@ gulp.task('server', connect.server({root: [__dirname], port: 4000}));
 function bundle() {
   return browserify({
     shim: {
-      backbone: {
-        path: 'lib/backbone-1.1.1.js',
-        exports: 'Backbone',
-        depends: {
-          jquery: '$',
-          underscore: '_'
-        }
+      angular: {
+        path: 'lib/angular/angular.js',
+        exports: 'angular',
+        depends: {jquery: '$'}
+      },
+      'angular-resource': {
+        path: 'lib/angular-resource/angular-resource.js',
+        exports: 'ngResource',
+        depends: {angular: 'angular'}
+      },
+      'angular-route': {
+        path: 'lib/angular-route/angular-route.js',
+        exports: 'ngRoute',
+        depends: {angular: 'angular'}
+      },
+      chai: {
+        path: 'lib/chai/chai.js'
       },
       jquery: {
-        path: 'lib/jquery-2.1.0.js',
+        path: 'lib/jquery/dist/jquery.js',
         exports: '$'
       },
-      marionette: {
-        path: 'lib/backbone.marionette-1.6.2.js',
-        exports: 'Marionette',
-        depends: {
-          jquery: '$',
-          underscore: '_',
-          backbone: 'Backbone'
-        }
-      },
-      rivets: {
-        path: 'lib/rivets-0.6.6.js',
-        exports: 'rivets'
-      },
       rsvp: {
-        path: 'lib/rsvp-3.0.6.js',
+        path: 'lib/rsvp/rsvp.js',
         exports: 'RSVP'
-      },
-      underscore: {
-        path: 'lib/underscore-1.6.0.js',
-        exports: '_'
-      },
-      'underscore.string': {
-        path: 'lib/underscore.string-2.3.2.js',
-        exports: '_.str',
-        depends: {
-          underscore: '_'
-        }
       }
-    },
-    transform: ['brfs']
+    }
   });
 }

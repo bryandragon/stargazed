@@ -7,7 +7,6 @@
     "test": "make test"
   },
   "devDependencies": {
-    "brfs": "~0.2.1",
     "gulp": "~3.5.2",
     "gulp-browserify": "~0.4.6",
     "gulp-clean": "~0.2.4",
