@@ -12,7 +12,8 @@
     "gulp-clean": "~0.2.4",
     "gulp-concat": "~2.1.7",
     "gulp-connect": "~1.0.5",
-    "gulp-stylus": "~0.0.13"
+    "gulp-stylus": "~0.0.13",
+    "partialify": "~3.1.0"
   },
   "license": "MIT",
   "private": true

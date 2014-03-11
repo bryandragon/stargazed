@@ -36,7 +36,7 @@ gulp.task('build-test', function () {
 });
 
 gulp.task('build', ['clean'], function () {
-  gulp.start('build-images', 'build-styles', 'build-app', 'build-test');
+  gulp.start('build-images', 'build-styles', 'build-app' /*, 'build-test'*/);
 });
 
 gulp.task('server', connect.server({root: [__dirname], port: 4000}));
@@ -70,6 +70,9 @@ function bundle() {
         path: 'lib/rsvp/rsvp.js',
         exports: 'RSVP'
       }
-    }
+    },
+    transform: [
+      'partialify'
+    ]
   });
 }
