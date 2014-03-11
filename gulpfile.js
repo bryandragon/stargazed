@@ -22,9 +22,9 @@ gulp.task('build-styles', function () {
 });
 
 gulp.task('build-app', function () {
-  return gulp.src('src/main.js')
+  return gulp.src('src/app.js')
     .pipe(bundle())
-    .pipe(concat('main.js'))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -61,9 +61,6 @@ function bundle() {
         path: 'lib/angular-route/angular-route.js',
         exports: 'ngRoute',
         depends: {angular: 'angular'}
-      },
-      chai: {
-        path: 'lib/chai/chai.js'
       },
       jquery: {
         path: 'lib/jquery/dist/jquery.js',
