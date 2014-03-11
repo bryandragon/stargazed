@@ -2,5 +2,13 @@
 
 var angular = require('angular');
 
-angular.module('stargazed', [])
-  .service('GitHub', require('./common/services/github'));
+require('angular-route');
+
+angular.module('stargazed', [
+    'ngRoute'
+  ])
+  .config(['$locationProvider', function ($locationProvider) {
+    $locationProvider.html5Mode(false);
+    $locationProvider.hashPrefix('!');
+  }])
+  .service('GitHub', require('./services/github'));
