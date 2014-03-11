@@ -1,6 +1,6 @@
 'use strict';
 
-var angular = require('angular')
-  , stargazed = angular.module('stargazed', []);
+var angular = require('angular');
 
-module.exports = stargazed;
+angular.module('stargazed', [])
+  .service('GitHub', require('./common/services/github'));
