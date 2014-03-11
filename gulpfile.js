@@ -3,8 +3,7 @@ var gulp = require('gulp')
   , concat = require('gulp-concat')
   , connect = require('gulp-connect')
   , browserify = require('gulp-browserify')
-  , stylus = require('gulp-stylus')
-  , mocha = require('gulp-mocha');
+  , stylus = require('gulp-stylus');
 
 gulp.task('clean', function () {
   return gulp.src('build')
