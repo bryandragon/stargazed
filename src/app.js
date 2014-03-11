@@ -5,7 +5,8 @@ var angular = require('angular');
 require('angular-route');
 
 angular.module('stargazed', [
-    'ngRoute'
+    'ngRoute',
+    require('./modules/search').name
   ])
   .config(['$locationProvider', function ($locationProvider) {
     $locationProvider.html5Mode(false);

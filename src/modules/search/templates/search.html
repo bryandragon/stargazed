@@ -1,0 +1,9 @@
+<div class="search-view" data-ng-form="searchForm">
+  <p class="instructions" data-ng-show="showInstructions">Enter the name of a GitHub organization below to see its repos ranked by number of stargazers.</p>
+  <input class="search-input"
+    type="text"
+    name="query"
+    data-ng-model="query"
+    data-ng-trim="true"
+    data-ng-keyup="onKeyUp($event)"/>
+</div>
